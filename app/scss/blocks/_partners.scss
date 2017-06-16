@@ -1,0 +1,10 @@
+.partners {
+  background-color: $light-color;
+}
+
+.partners__inner {
+  @include make-limit-width();
+
+  padding-top: $grid-gutter-width;
+  padding-bottom: $grid-gutter-width;
+}

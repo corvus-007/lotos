@@ -1,0 +1,494 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Главная - Лотос</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="homepage">
+  <div class="site-wrapper">
+    <div class="welcome">
+      @@include('blocks/site-header.html')
+      <div class="welcome__bg-inner">
+        <div class="welcome__inner">
+          <h1 class="welcome__title">
+            <span class="welcome__title-logo">Лотос</span> клиника семейной стоматологии
+          </h1>
+          <div class="welcome__actions">
+            <a class="welcome__button" data-fancybox href="#popup-callback">Записаться на прием</a>
+          </div>
+        </div>
+      </div>
+      @@include('blocks/navbar.html')
+    </div>
+
+    <div class="about">
+      <div class="about__image">
+        <img src="http://placehold.it/640x430/77c/fff" alt="">
+      </div>
+      <div class="about__inner">
+        <div class="about__text">
+          <h3>
+            Клиника семейной стоматологии “Лотос” отличается от других компаний!
+          </h3>
+          <p>В клинике семейной стоматологии “Лотос” города Брянска большое внимание уделяется повышению профессиональной квалификации
+            всех сотрудников.</p>
+          <p>На вооружении наших врачей самые последние технологии и достижения современной медицины. Новейшее оборудование
+            и высокий уровень знаний наших специалистов, позволяют провести полное обследование пациентов и индивидуально
+            спланировать наиболее рациональный план лечения.</p>
+          <p>На протяжении 10 лет мы успешно поддерживаем статус лучшей стоматологии Брянска!</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="cta">
+      <div class="cta__inner">
+        <div class="cta__header">
+          <b class="cta__title">Оставь заявку на консультацию</b>
+          <p class="cta__subtitle">Успей до
+            <mark>19 апреля</mark> и получи скидку 10% на проживание!</p>
+        </div>
+        <div class="cta__body">
+          <a class="cta__button" data-fancybox href="#popup-callback">Оставить заявку сейчас</a>
+        </div>
+        <div class="cta__footer">
+          <p>Помните! Заполнение и отправка заявки вас ни к чему не обязывает, вы сможете просто проконсультироваться и, при
+            желании, воспользоваться нашей услугой.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="partners">
+      <div class="partners__inner">
+        <div class="partners-slider">
+          <div class="partners-slider__item">
+            <img src="images/partners/101.png" srcset="images/partners/101@2x.png 2x" alt="">
+          </div>
+          <div class="partners-slider__item">
+            <img src="images/partners/agoda.png" srcset="images/partners/agoda@2x.png 2x" alt="">
+          </div>
+          <div class="partners-slider__item">
+            <img src="images/partners/booking.png" srcset="images/partners/booking@2x.png 2x" alt="">
+          </div>
+          <div class="partners-slider__item">
+            <img src="images/partners/hotels.png" srcset="images/partners/hotels@2x.png 2x" alt="">
+          </div>
+          <div class="partners-slider__item">
+            <img src="images/partners/komandirovka.png" srcset="images/partners/komandirovka@2x.png 2x" alt="">
+          </div>
+          <div class="partners-slider__item">
+            <img src="images/partners/ostrovok.png" srcset="images/partners/ostrovok@2x.png 2x" alt="">
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <section class="section services">
+      <div class="section__header">
+        <h2 class="section__title">Услуги нашей стоматологии</h2>
+        <p class="section__subtitle">Коротко о том, что мы предлагаем для вас</p>
+      </div>
+      <div class="section__body container">
+        <ul class="services__list">
+          <li class="services__item col-sm-3">
+            <a href="#" class="services__wrap-link">
+              <svg class="services__icon" width="48" height="48">
+                <use xlink:href="images/symbols.svg#holed-tooth"></use>
+              </svg>
+              <b class="services__caption">Лечение зубов</b>
+              <div class="services__desription">
+                <p>Удаление старой пломбы, постановка новой пломбы, светового отверждения</p>
+              </div>
+            </a>
+          </li>
+          <li class="services__item col-sm-3">
+            <a href="#" class="services__wrap-link">
+              <svg class="services__icon" width="48" height="48">
+                <use xlink:href="images/symbols.svg#examinating-tooth"></use>
+              </svg>
+              <b class="services__caption">Эстетическая реставрация</b>
+              <div class="services__desription">
+                <p>Эстетическая реставрация зуба, восстановление формы зуба</p>
+              </div>
+            </a>
+          </li>
+          <li class="services__item col-sm-3">
+            <a href="#" class="services__wrap-link">
+              <svg class="services__icon" width="48" height="48">
+                <use xlink:href="images/symbols.svg#decayed-tooth"></use>
+              </svg>
+              <b class="services__caption">Лечение кариеса</b>
+              <div class="services__desription">
+                <p>Кариес – одно из самых распространенных и неприятных заболеваний зубов</p>
+              </div>
+            </a>
+          </li>
+          <li class="services__item col-sm-3">
+            <a href="#" class="services__wrap-link">
+              <svg class="services__icon" width="48" height="48">
+                <use xlink:href="images/symbols.svg#fake-tooth"></use>
+              </svg>
+              <b class="services__caption">Имплантация зубов</b>
+              <div class="services__desription">
+                <p>Является эффективным способом замещения отсутствующих или утраченных зубов</p>
+              </div>
+            </a>
+          </li>
+          <li class="services__item col-sm-3">
+            <a href="#" class="services__wrap-link">
+              <svg class="services__icon" width="48" height="48">
+                <use xlink:href="images/symbols.svg#tooth-with-braces"></use>
+              </svg>
+              <b class="services__caption">Ровная улыбка</b>
+              <div class="services__desription">
+                <p>Сделать зубы ровными, исправить прикус – помогут наши врачи-ортодонты</p>
+              </div>
+            </a>
+          </li>
+          <li class="services__item col-sm-3">
+            <a href="#" class="services__wrap-link">
+              <svg class="services__icon" width="48" height="48">
+                <use xlink:href="images/symbols.svg#dental-floss"></use>
+              </svg>
+              <b class="services__caption">Профилактический осмотр</b>
+              <div class="services__desription">
+                <p>Помните, заболевание гораздо проще предотвратить, чем лечить</p>
+              </div>
+            </a>
+          </li>
+          <li class="services__item col-sm-3">
+            <a href="#" class="services__wrap-link">
+              <svg class="services__icon" width="48" height="48">
+                <use xlink:href="images/symbols.svg#cracked-tooth"></use>
+              </svg>
+              <b class="services__caption">Чистка отложений и налета</b>
+              <div class="services__desription">
+                <p>Профессиональный уход за полостью рта способен предотвратить множество заболеваний</p>
+              </div>
+            </a>
+          </li>
+          <li class="services__item col-sm-3">
+            <a href="#" class="services__wrap-link">
+              <svg class="services__icon" width="48" height="48">
+                <use xlink:href="images/symbols.svg#shiny-tooth"></use>
+              </svg>
+              <b class="services__caption">Отбеливание зубов</b>
+              <div class="services__desription">
+                <p>Наши специалисты подберут для вас наиболее щадящий метод отбеливания зубов</p>
+              </div>
+            </a>
+          </li>
+        </ul>
+      </div>
+      <div class="section__footer services__footer container">
+        <div class="services__actions">
+          <a class="services__button button button--orange" href="#">Скачать прайс-лист</a>
+          <a class="services__button button button--green" data-fancybox href="#popup-booking">Записаться на прием</a>
+        </div>
+      </div>
+    </section>
+
+    <div class="cta">
+      <div class="cta__inner">
+        <div class="cta__header">
+          <b class="cta__title">Оставь заявку на консультацию</b>
+          <p class="cta__subtitle">Успей до
+            <mark>19 апреля</mark> и получи скидку 10% на проживание!</p>
+        </div>
+        <div class="cta__body">
+          <a class="cta__button" data-fancybox href="#popup-callback">Оставить заявку сейчас</a>
+        </div>
+        <div class="cta__footer">
+          <p>Помните! Заполнение и отправка заявки вас ни к чему не обязывает, вы сможете просто проконсультироваться и, при
+            желании, воспользоваться нашей услугой.</p>
+        </div>
+      </div>
+    </div>
+
+    <section class="section gallery" id="gallery-section">
+      <div class="section__header">
+        <h2 class="section__title">Фотографии интерьера</h2>
+        <p class="section__subtitle">У нас чисто и уютно. Ждем вас в гости!</p>
+      </div>
+      <div class="section__body">
+        <div class='tabs js-gallery-tabs'>
+          <ul class='tabs__menu'>
+            <li class="tabs__menu-item">
+              <a class="tabs__menu-link" href="#tab-1">Кабинет ортопеда</a>
+            </li>
+            <li class="tabs__menu-item">
+              <a class="tabs__menu-link" href="#tab-2">Ресепшен</a>
+            </li>
+            <li class="tabs__menu-item">
+              <a class="tabs__menu-link" href="#tab-3">Кабинет хирургии</a>
+            </li>
+          </ul>
+          <div class="tabs__pane" id='tab-1'>
+            <div class="container">
+              <h3 class="visuallyhidden">Кабинет ортопеда</h3>
+              <div class="gallery__intro">
+                <p>Современный дизайн и отделка кабинета – визитная карточка нашей стоматологии. А современное оборудование
+                  и новые технологии подчеркивают наш профессионализм в свере нашей деятельности.</p>
+              </div>
+            </div>
+            <div class="gallery-slider base-slider">
+              <div class="gallery-slider__item">
+                <a data-fancybox="gallery1" data-type="image" href="http://placehold.it/800x600/77c/fff"><img src="http://placehold.it/407x272/77c/fff" alt=""></a>
+              </div>
+              <div class="gallery-slider__item">
+                <a data-fancybox="gallery1" data-type="image" href="http://placehold.it/800x600/7dc/fff"><img src="http://placehold.it/407x272/7dc/fff" alt=""></a>
+              </div>
+              <div class="gallery-slider__item">
+                <a data-fancybox="gallery1" data-type="image" href="http://placehold.it/800x600/c7d/fff"><img src="http://placehold.it/407x272/c7d/fff" alt=""></a>
+              </div>
+              <div class="gallery-slider__item">
+                <a data-fancybox="gallery1" data-type="image" href="http://placehold.it/800x600/37d/fff"><img src="http://placehold.it/407x272/37d/fff" alt=""></a>
+              </div>
+              <div class="gallery-slider__item">
+                <a data-fancybox="gallery1" data-type="image" href="http://placehold.it/800x600/3d7/fff"><img src="http://placehold.it/407x272/3d7/fff" alt=""></a>
+              </div>
+              <div class="gallery-slider__item">
+                <a data-fancybox="gallery1" data-type="image" href="http://placehold.it/800x600/d37/fff"><img src="http://placehold.it/407x272/d37/fff" alt=""></a>
+              </div>
+            </div>
+          </div>
+          <div class="tabs__pane" id='tab-2'>
+            <div class="container">
+              <h3 class="visuallyhidden">Ресепшен</h3>
+              <div class="gallery__intro">
+                <p><b>Женское размещение</b> — далеко-далеко за словесными горами в стране, гласных и согласных живут рыбные
+                  тексты. Парадигматическая, своих ему. Запятых толку реторический, рекламных залетают безопасную даже.</p>
+              </div>
+            </div>
+            <div class="gallery-slider base-slider">
+              <div class="gallery-slider__item">
+                <a data-fancybox="gallery2" data-type="image" href="http://placehold.it/800x600/7c7/fff"><img src="http://placehold.it/407x272/7c7/fff" alt=""></a>
+              </div>
+              <div class="gallery-slider__item">
+                <a data-fancybox="gallery2" data-type="image" href="http://placehold.it/800x600/7cd/fff"><img src="http://placehold.it/407x272/7cd/fff" alt=""></a>
+              </div>
+              <div class="gallery-slider__item">
+                <a data-fancybox="gallery2" data-type="image" href="http://placehold.it/800x600/cd7/fff"><img src="http://placehold.it/407x272/cd7/fff" alt=""></a>
+              </div>
+              <div class="gallery-slider__item">
+                <a data-fancybox="gallery2" data-type="image" href="http://placehold.it/800x600/3d7/fff"><img src="http://placehold.it/407x272/3d7/fff" alt=""></a>
+              </div>
+              <div class="gallery-slider__item">
+                <a data-fancybox="gallery2" data-type="image" href="http://placehold.it/800x600/37d/fff"><img src="http://placehold.it/407x272/37d/fff" alt=""></a>
+              </div>
+              <div class="gallery-slider__item">
+                <a data-fancybox="gallery2" data-type="image" href="http://placehold.it/800x600/d73/fff"><img src="http://placehold.it/407x272/d73/fff" alt=""></a>
+              </div>
+            </div>
+          </div>
+          <div class="tabs__pane" id='tab-3'>
+            <div class="container">
+              <h3 class="visuallyhidden">Кабинет хирургии</h3>
+              <div class="gallery__intro">
+                <p><b>Индивидуально для пар</b> — далеко-далеко за словесными горами в стране, гласных и согласных живут рыбные
+                  тексты. Парадигматическая, своих ему. Запятых толку реторический, рекламных залетают безопасную даже.</p>
+              </div>
+            </div>
+            <div class="gallery-slider base-slider">
+              <div class="gallery-slider__item">
+                <a data-fancybox="gallery3" data-type="image" href="http://placehold.it/800x600/77c/fff"><img src="http://placehold.it/407x272/77c/fff" alt=""></a>
+              </div>
+              <div class="gallery-slider__item">
+                <a data-fancybox="gallery3" data-type="image" href="http://placehold.it/800x600/d7c/fff"><img src="http://placehold.it/407x272/d7c/fff" alt=""></a>
+              </div>
+              <div class="gallery-slider__item">
+                <a data-fancybox="gallery3" data-type="image" href="http://placehold.it/800x600/7cd/fff"><img src="http://placehold.it/407x272/7cd/fff" alt=""></a>
+              </div>
+              <div class="gallery-slider__item">
+                <a data-fancybox="gallery3" data-type="image" href="http://placehold.it/800x600/73d/fff"><img src="http://placehold.it/407x272/73d/fff" alt=""></a>
+              </div>
+              <div class="gallery-slider__item">
+                <a data-fancybox="gallery3" data-type="image" href="http://placehold.it/800x600/d37/fff"><img src="http://placehold.it/407x272/d37/fff" alt=""></a>
+              </div>
+              <div class="gallery-slider__item">
+                <a data-fancybox="gallery3" data-type="image" href="http://placehold.it/800x600/3d7/fff"><img src="http://placehold.it/407x272/3d7/fff" alt=""></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- <section class="section improvements">
+      <div class="section__header">
+        <h2 class="section__title">Всё ещё сомневаетесь?</h2>
+        <p class="section__subtitle">Давайте мы развеем последнюю неуверенность!</p>
+      </div>
+      <div class="section__body container">
+        <ul class="improvements__list">
+          <li class="improvements__item col-6 col-sm-4">
+            <svg class="improvements__icon" width="64" height="64">
+              <use xlink:href="images/symbols.svg#checked"></use>
+            </svg>
+            <h3 class="improvements__caption">Возвращаем остаток</h3>
+            <p>
+              Если вы решили съехать раньше предполагаемого срока, мы вернем вам остаток денег.
+            </p>
+          </li>
+          <li class="improvements__item col-6 col-sm-4">
+            <svg class="improvements__icon" width="64" height="64">
+              <use xlink:href="images/symbols.svg#checked"></use>
+            </svg>
+            <h3 class="improvements__caption">Работаем без посредников</h3>
+            <p>
+              Все койко-места в нашем хостеле сдаются без участия посредников или агентов.
+            </p>
+          </li>
+          <li class="improvements__item col-6 col-sm-4">
+            <svg class="improvements__icon" width="64" height="64">
+              <use xlink:href="images/symbols.svg#checked"></use>
+            </svg>
+            <h3 class="improvements__caption">Нет комиссии и залогов</h3>
+            <p>
+              Мы не берем с вас залог и не расчитываем комиссию. Отдыхайте с комфортом!
+            </p>
+          </li>
+          <li class="improvements__item col-6 col-sm-4">
+            <svg class="improvements__icon" width="64" height="64">
+              <use xlink:href="images/symbols.svg#checked"></use>
+            </svg>
+            <h3 class="improvements__caption">Оплата с расчетного счета</h3>
+            <p>
+              Полный комплект отчетных документов для организаций и командировочных.
+            </p>
+          </li>
+          <li class="improvements__item col-6 col-sm-4">
+            <svg class="improvements__icon" width="64" height="64">
+              <use xlink:href="images/symbols.svg#checked"></use>
+            </svg>
+            <h3 class="improvements__caption">Можно платить частями</h3>
+            <p>
+              Прямо сейчас у вас нет нужной суммы? Вы можете сделать оплату частично!
+            </p>
+          </li>
+          <li class="improvements__item col-6 col-sm-4">
+            <svg class="improvements__icon" width="64" height="64">
+              <use xlink:href="images/symbols.svg#checked"></use>
+            </svg>
+            <h3 class="improvements__caption">Принимаем оплату картой</h3>
+            <p>
+              Прямо сейчас у вас нет нужной суммы? Вы можете сделать оплату частично!
+            </p>
+          </li>
+        </ul>
+      </div>
+      <div class="section__footer improvements__footer container">
+        <a class="improvements__button button button--green" data-fancybox href="#popup-booking">Забронировать номер</a>
+      </div>
+    </section> -->
+
+    <!-- <section class="section faq">
+      <div class="section__header">
+        <h2 class="section__title">Ответим на вопросы</h2>
+        <p class="section__subtitle">Давайте мы развеем последнюю неуверенность!</p>
+      </div>
+      <div class="section__body container">
+        <dl class="faq__list js-accordion">
+          <dt>Это безопасно?</dt>
+          <dd>
+            <p>Да! Сразу после отправки фото, мы свяжемся с Вами, чтобы обсудить все вопросы.</p>
+          </dd>
+          <dt>Как сделать заказ?</dt>
+          <dd>
+            <ol>
+              <li>
+                <p>Выбираете свои фото, которые хотите распечатать.
+                <p>По умолчанию формат фото 10×15 см, на глянцевой бумаге!</p>
+              </li>
+              <li>
+                <p>Загружаете в интернет, любым способом:</p>
+                <ul>
+                  <li><a href="https://drive.google.com/" target="_blank">Google Drive</a></li>
+                  <li><a href="https://disk.yandex.ru/" target="_blank">Яндекс.Диск</a></li>
+                  <li><a href="https://cloud.mail.ru/" target="_blank">Облако@mail.ru</a></li>
+                  <li><a href="https://www.dropbox.com/" target="_blank">Dropbox</a></li>
+                  <li><a href="https://mega.nz/" target="_blank">Mega</a></li>
+                  <li>… и другие</li>
+                </ul>
+              </li>
+              <li>
+                <p>Ссылку на папку отправьте нам через "ЗАГРУЗИТЬ ФОТОЧКИ"</p>
+              </li>
+              <li>
+                <p>Мы свяжемся с Вами, чтобы всё уточнить!</p>
+              </li>
+              <li>
+                <p>В течение суток наш курьер доставит напечатанные фотографии по адресу.</p>
+              </li>
+            </ol>
+          </dd>
+          <dt>Какой формат стоит 6 рублей?</dt>
+          <dd>
+            <p>По умолчанию формат фото 10×15 см, на глянцевой бумаге!</p>
+          </dd>
+          <dt>Доставка бесплатно, это как?</dt>
+          <dd>
+            <p>В любой район Брянска ваши фото мы доставим бесплатно! Только укажите адрес.</p>
+          </dd>
+          <dt>Как оплачивать?</dt>
+          <dd>
+            <p>В основном принимаем оплату переводом на банковские карты.</p>
+            <p>Другие варианты тоже обсуждаются.</p>
+          </dd>
+        </dl>
+      </div>
+    </section> -->
+
+    <section class="location">
+      <h2 class="visuallyhidden">Контакты</h2>
+      <div class="location__map-wrapper">
+        <div class="location__map" id="location-map"></div>
+      </div>
+      <div class="container">
+        <div class="location__form-wrapper">
+          <form class="location__form" action="" method="post">
+            <label class="form-item">
+              <span class="form-label visuallyhidden">Как к вам обращаться?</span>
+              <input class="form-control location__form-control" type="text" name="clientName" placeholder="Как к вам обращаться?">
+            </label>
+            <label class="form-item">
+              <span class="form-label visuallyhidden">Куда позвонить?</span>
+              <input class="form-control location__form-control" type="tel" name="clientPhone" placeholder="Куда позвонить?" required>
+            </label>
+            <label class="form-item">
+              <span class="form-label visuallyhidden">Текст сообщения</span>
+              <textarea class="form-control location__form-control" name="clientMessage" rows="4" placeholder="Текст сообщения" required></textarea>
+            </label>
+            <input type="text" class="form-submit button button--orange" value="Отправить сообщение">
+          </form>
+          <div class="location__note">
+            <p>
+              Отправляя данные, вы соглашаетесь с <a href="#" target="_blank">Политикой&nbsp;конфиденциальности</a> этого
+              сайта
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+    @@include('blocks/site-footer.html')
+  </div>
+  <div class="feature-popup popup" id="feature-1" hidden>
+    <svg class="feature-popup__icon" width="82" height="82">
+      <use xlink:href="images/symbols.svg#bunk"></use>
+    </svg>
+    <h3 class="feature-popup__title">Спальные места</h3>
+    <div class="feature-popup__description">
+      <p>В номерах двухъярусные новые кровати из массива сосны с лестницами, шторками и выкатными ящиками с ортопедическим матрасом
+        Не скрипят не шатаются. Каждое спальное место оборудовано розетками и светильником.</p>
+    </div>
+  </div>
+  @@include('blocks/popup-callback.html')
+  @@include('blocks/site-scripts.html')
+
+</body>
+
+</html>

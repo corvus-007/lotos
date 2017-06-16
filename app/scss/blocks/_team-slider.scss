@@ -1,0 +1,36 @@
+.team-slider-wrapper {
+  position: relative;
+
+  .slick-arrow {
+    top: auto;
+  }
+}
+
+.team-slider-wrapper__bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: linear-gradient(to top, $light-color, #fefefe);
+}
+
+.team-slider {
+  .slick-track {
+    display: flex;
+
+    &::before,
+    &::after {
+      content: none;
+    }
+  }
+}
+
+.team-slider__item {
+  height: auto;
+}
+
+.slick-initialized .team-slider__item {
+  display: flex;
+  flex-direction: column;
+}

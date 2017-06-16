@@ -1,0 +1,36 @@
+.contacts-header {
+  text-align: right;
+
+  @include media-breakpoint-down(sm) {
+    text-align: center;
+  }
+}
+
+.contacts-header__phones {
+  font-weight: 600;
+  font-size: rem(24);
+  color: $accent-color;
+
+  a {
+    color: $accent-color;
+    border-bottom: none;
+
+    &:not(:last-child)::after {
+      content: ",";
+    }
+  }
+
+  span {
+    color: $primary-color;
+  }
+
+  @include media-breakpoint-down(xs) {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+.contacts-header__callback {
+  @include dotted-link();
+}

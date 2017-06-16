@@ -1,0 +1,76 @@
+.partners-slider {
+
+  .slick-arrow {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    z-index: 1;
+    width: 40px;
+    height: 40px;
+    margin: auto;
+    padding: 0;
+    border: none;
+    overflow: hidden;
+    font-size: 0;
+    outline: none;
+    background: none;
+    cursor: pointer;
+    transition: filter 0.25s;
+
+    &::before {
+      content: "";
+      left: 0;
+      right: 0;
+      bottom: 0;
+      top: 0;
+      margin: auto;
+      position: absolute;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: contain;
+    }
+
+    &:hover {
+      filter: brightness(120%);
+    }
+
+    &.slick-disabled {
+      filter: brightness(100%) grayscale(100%);
+      cursor: default;
+      opacity: 0.5;
+    }
+  }
+
+  .slick-prev {
+    left: 0;
+
+    &::before {
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512'%3E%3Cg fill='%236A6E7C'%3E%3Cpath d='M129 266.5c2.6 0 5.3-1 7.3-3L390.3 18c4.2-4 4.3-10.7.3-15-4-4-10.7-4.2-15-.2l-254 245.5c-4 4-4.2 10.7-.2 15 2 2.2 4.8 3.2 7.6 3.2z'/%3E%3Cpath d='M383 512c2.8 0 5.5-1 7.6-3.2 4-4.2 4-11-.3-15l-254-245.4c-4.2-4-11-4-15 .3-4 4.2-3.8 11 .4 15l254 245.4c2 2 4.7 3 7.3 3z'/%3E%3C/g%3E%3C/svg%3E");
+    }
+  }
+
+  .slick-next {
+    right: 0;
+
+    &::before {
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512'%3E%3Cg fill='%236A6E7C'%3E%3Cpath d='M383 266.5c-2.6 0-5.3-1-7.3-3L121.7 18c-4.2-4-4.3-10.7-.3-15 4-4 10.7-4.2 15-.2l254 245.5c4 4 4.2 10.7.2 15-2 2.2-4.8 3.2-7.6 3.2z'/%3E%3Cpath d='M129 512c-2.8 0-5.5-1-7.6-3.2-4-4.2-4-11 .3-15l254-245.4c4.2-4 11-4 15 .3 4 4.2 3.8 11-.4 15L136.3 509c-2 2-4.7 3-7.3 3z'/%3E%3C/g%3E%3C/svg%3E");
+    }
+  }
+
+  @include media-breakpoint-up(md) {
+    padding-left: 45px;
+    padding-right: 45px;
+  }
+}
+
+.partners-slider__item {
+  min-height: 80px;
+  margin-left: ($grid-gutter-width / 1);
+  margin-right: ($grid-gutter-width / 1);
+}
+
+.slick-initialized .partners-slider__item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

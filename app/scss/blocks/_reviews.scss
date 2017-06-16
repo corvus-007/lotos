@@ -1,0 +1,69 @@
+.reviews {
+}
+
+.reviews__item {
+
+}
+
+.reviews__headline {
+  display: flex;
+  align-items: center;
+  margin-bottom: $grid-gutter-width;
+}
+
+.reviews__headline-column {
+
+}
+
+.reviews__avatar-wrapper {
+  width: 76px;
+  height: 76px;
+  margin-right: ($grid-gutter-width / 2);
+  border-radius: 50%;
+  overflow: hidden;
+  background-color: $secondary-color;
+}
+
+.reviews__avatar {
+  width: 100px;
+  height: 100%;
+  object-fit: cover;
+}
+
+.reviews__name {
+  display: block;
+  margin: 0;
+  margin-bottom: 5px;
+  line-height: 1;
+  font-weight: normal;
+  font-size: $font-size--large;
+  font-family: $secondary-font;
+}
+
+.reviews__rating {
+  display: flex;
+  aling-items: center;
+}
+
+.reviews__star {
+  width: 25px;
+  height: 25px;
+  background-image: url("images/star--active.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  font-size: 0;
+}
+
+.reviews__rating--stars-1 .reviews__star:nth-child(1n) ~ .reviews__star,
+.reviews__rating--stars-2 .reviews__star:nth-child(2n) ~ .reviews__star,
+.reviews__rating--stars-3 .reviews__star:nth-child(3n) ~ .reviews__star,
+.reviews__rating--stars-4 .reviews__star:nth-child(4n) ~ .reviews__star,
+.reviews__rating--stars-5 .reviews__star:nth-child(5n) ~ .reviews__star {
+  background-image: url("images/star.svg");
+}
+
+.reviews__message {
+  margin: 0;
+  margin-bottom: $grid-gutter-width;
+}

@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Главная - Лотос</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="page">
+  <div class="site-wrapper">
+    @@include('blocks/site-header.html') @@include('blocks/navbar.html')
+
+    <main class="main">
+      <article class="page__content">
+        <header class="page__headline slim-container">
+          <h1>Отзывы клиентов</h1>
+          <div class="page__intro">
+            <p>Уважаемые посетители сайта, если вы уже стали пациентом нашего клиники семейной стоматологии «Лотос», то здесь вы можете оставить свой отзыв о работе специалистов Центра, высказать свои пожелания и предложения по улучшению качества обслуживания. Ваше мнение очень важно для нас!</p>
+          </div>
+        </header>
+        <div class="page__content-incut">
+          <div class="reviews">
+            <div class="reviews-slider base-slider">
+              <div class="reviews__item reviews-slider__item">
+                <div class="reviews-slider__inner">
+                  <div class="reviews__headline">
+                    <div class="reviews__headline-column reviews__avatar-wrapper">
+                      <img class="reviews__avatar" src="images/woman.svg" alt="Диана">
+                    </div>
+                    <div class="reviews__headline-column">
+                      <b class="reviews__name">Диана</b>
+                      <div class="reviews__rating reviews__rating--stars-3">
+                        <span class="reviews__star">1</span>
+                        <span class="reviews__star">2</span>
+                        <span class="reviews__star">3</span>
+                        <span class="reviews__star">4</span>
+                        <span class="reviews__star">5</span>
+                      </div>
+                    </div>
+                  </div>
+                  <blockquote class="reviews__message">
+                    <p>Все супер!! Только положительные эмоции! Очень красиво в номере, уютненько. Расположение очень хорошее. За такие деньги лучше не найдёшь ничего! Татьяна Павловна гостеприимно встретила нас и разместила, рассказала где/что можно купить и куда можно сходить. Вообщем все понравилось! Незабываемая поездка</p>
+                  </blockquote>
+                </div>
+              </div>
+              <div class="reviews__item reviews-slider__item">
+                <div class="reviews-slider__inner">
+                  <div class="reviews__headline">
+                    <div class="reviews__headline-column reviews__avatar-wrapper">
+                      <img class="reviews__avatar" src="images/man.svg" alt="Димон">
+                    </div>
+                    <div class="reviews__headline-column">
+                      <b class="reviews__name">Димон</b>
+                      <div class="reviews__rating reviews__rating--stars-1">
+                        <span class="reviews__star">1</span>
+                        <span class="reviews__star">2</span>
+                        <span class="reviews__star">3</span>
+                        <span class="reviews__star">4</span>
+                        <span class="reviews__star">5</span>
+                      </div>
+                    </div>
+                  </div>
+                  <blockquote class="reviews__message">
+                    <p>Все супер!! Только положительные эмоции! Очень красиво в номере, уютненько. Вообщем все понравилось! Незабываемая поездка</p>
+                  </blockquote>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="page__content-incut">
+          <form class="form-reviews" action="" method="">
+            <div class="slim-container">
+              <div class="row">
+                <label class="form-item col-md-5">
+                  <span class="form-label form-label--required">Представьтесь, пожалуйста</span>
+                  <input type="text" name="userName" class="form-control form-reviews__control" required>
+                </label>
+                <div class="form-item form-reviews__center-parent col-sm-6 col-md-3">
+                  <div class="form-reviews__center-item">
+                    <span class="form-label form-label--required">Ваш пол</span>
+                    <div class="gender-controls">
+                      <input class="gender-controls__input" type="radio" name="userGender" value="man" id="field-man" checked>
+                      <label class="gender-controls__indicator" for="field-man" title="Мужской">Мужской</label>
+                      <input class="gender-controls__input" type="radio" name="userGender" value="woman" id="field-woman">
+                      <label class="gender-controls__indicator" for="field-woman" title="Женский">Женский</label>
+                    </div>
+                  </div>
+                </div>
+                <div class="form-item form-reviews__center-parent col-sm-6 col-md-4">
+                  <div class="form-reviews__center-item">
+                    <span class="form-label form-label--required">Оцените нашу стоматологию</span>
+                    <div class="form-reviews__star-controls star-controls">
+                      <input class="star-controls__input" type="radio" name="userRating" value="star1" id="field-star1">
+                      <label class="star-controls__indicator" for="field-star1">1</label>
+                      <input class="star-controls__input" type="radio" name="userRating" value="star2" id="field-star2">
+                      <label class="star-controls__indicator" for="field-star2">2</label>
+                      <input class="star-controls__input" type="radio" name="userRating" value="star3" id="field-star3">
+                      <label class="star-controls__indicator" for="field-star3">3</label>
+                      <input class="star-controls__input" type="radio" name="userRating" value="star4" id="field-star4">
+                      <label class="star-controls__indicator" for="field-star4">4</label>
+                      <input class="star-controls__input" type="radio" name="userRating" value="star5" id="field-star5" checked>
+                      <label class="star-controls__indicator" for="field-star5">5</label>
+                    </div>
+                  </div>
+                </div>
+                <label class="form-item col-12">
+                  <span class="form-label form-label--required">Текст отзыва</span>
+                  <textarea class="form-control form-reviews__control" name="userMessage" rows="4" required></textarea>
+                </label>
+              </div>
+              <div class="form-reviews__submit-wrapper form-sumbit-wrapper">
+                <input class="form-submit button button--blue" type="submit" value="Отправить сообщение">
+                <div class="form-reviews__note form-note">
+                  <p>отправляя данные, вы соглашаетесь с <a href="#" target="_blank">Политикой конфиденциальности</a> этого сайта</p>
+                </div>
+              </div>
+            </div>
+          </form>
+        </div>
+      </article>
+    </main>
+
+    @@include('blocks/cta.html')
+
+    @@include('blocks/site-footer.html')
+  </div>
+  @@include('blocks/popup-callback.html') @@include('blocks/site-scripts.html')
+
+</body>
+
+</html>

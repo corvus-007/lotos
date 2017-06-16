@@ -1,0 +1,110 @@
+.welcome {
+  position: relative;
+}
+
+.welcome__bg-inner {
+  position: relative;
+  background: $light-color url("images/bg-welcome.jpg") no-repeat center 80% / cover;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: $light-color;
+    opacity: 0.6;
+    pointer-events: none;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: url("images/bg-welcome-logo.svg") no-repeat center / contain;
+    pointer-events: none;
+  }
+
+  @media #{$retina} {
+    background-image: url("images/bg-welcome@2x.jpg");
+  }
+
+}
+
+.welcome__inner {
+  @include make-container();
+
+  position: relative;
+  z-index: 2;
+  padding-bottom: ($grid-gutter-width * 4);
+  text-align: center;
+
+  @include media-breakpoint-up(md) {
+    padding-top: ($grid-gutter-width * 8);
+  }
+}
+
+.welcome__title {
+  max-width: 600px;
+  margin: 0;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 25px;
+  font-weight: normal;
+  font-size: rem($font-size--large);
+}
+
+.welcome__title-logo {
+  width: 257px;
+  height: 246px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 0;
+  background: url("images/welcome-title-logo.png") no-repeat center / contain;
+
+  @media #{$retina} {
+    background-image: url("images/welcome-title-logo@2x.png");
+  }
+}
+
+.welcome__actions {
+  @include media-breakpoint-up(sm) {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+
+  @include media-breakpoint-up(md) {
+    justify-content: center;
+  }
+}
+
+.welcome__button {
+  @include createButton();
+  @include createButtonColorsGreen();
+
+  width: 100%;
+  margin-bottom: $grid-gutter-width;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  @include media-breakpoint-up(sm) {
+    width: auto;
+    margin-bottom: 0;
+  }
+
+  @include media-breakpoint-up(md) {
+    margin-right: $grid-gutter-width;
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+}

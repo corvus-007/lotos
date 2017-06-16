@@ -1,0 +1,46 @@
+.gender-controls {
+  display: flex;
+}
+
+.gender-controls__input {
+  @include visuallyhidden();
+}
+
+.gender-controls__indicator {
+  display: block;
+  width: 48px;
+  height: 48px;
+  font-size: 0;
+  border: 4px solid transparent;
+  border-radius: 50%;
+  background-color: $secondary-color;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  cursor: pointer;
+  transition: $duration;
+
+  & ~ & {
+    margin-left: $grid-gutter-width;
+  }
+
+  &[for="field-man"] {
+    background-image: url("images/man.svg");
+  }
+
+  &[for="field-woman"] {
+    background-image: url("images/woman.svg");
+  }
+}
+
+.gender-controls__input:checked + .gender-controls__indicator {
+  border-color: $primary-color;
+}
+
+.gender-controls__input:not(:checked):hover + .gender-controls__indicator {
+  filter: brightness(105%);
+}
+
+.gender-controls__input:focus + .gender-controls__indicator {
+  filter: drop-shadow(0 0 2px rgba($dark-color, 0.5));
+}

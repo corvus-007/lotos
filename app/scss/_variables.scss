@@ -1,0 +1,87 @@
+// Colors
+$base-color: #3f4b49;
+$accent-color: #264796;
+$accent-color-2: #163e72;
+$primary-color: #0cb2eb;
+$secondary-color: #dfe6ec;
+$secondary-color-2: #dfe6ec;
+// $secondary-color-3: #fdf6eb;
+
+$white-color: #ffffff;
+$dark-color: #2f2a30;
+$green-color: #01ec96;
+$blue-color: #019b9f;
+$yellow-color: #fda31c;
+$red-color: #e62228;
+
+$success-color: #02c683;
+$info-color: #b9dfff;
+$warning-color: #edf512;
+$danger-color: #fd0d4d;
+
+$light-color: #f1f5f8;
+$muted-color: #8f8f8f;
+$link-color: $accent-color;
+$link-color--hover: $accent-color-2;
+
+
+// Fonts
+$font-size: 19px;
+$font-size--small: 15px;
+$font-size--smaller: 13px;
+$font-size--large: 24px;
+$primary-font: "Akrobat", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+$secondary-font: "noteworthy", "Brush Script MT", cursive;
+
+
+$duration: 0.22s;
+$border-radius: 2px;
+
+// Hamburgers
+$hamburger-padding-x: 2px;
+$hamburger-padding-y: 2px;
+$hamburger-layer-width: 30px;
+$hamburger-layer-height: 3px;
+$hamburger-layer-border-radius: 2px;
+$hamburger-layer-color: $base-color;
+$hamburger-types: (slider);
+
+
+// Grid
+$grid-columns: 12;
+$grid-gutter-width: 20px;
+
+
+// Slider
+$slider-buffer-dots: ($grid-gutter-width * 2);
+
+// Media querys
+$xs-width: 0;
+$sm-width: 568px;
+$md-width: 768px;
+$lg-width: 992px;
+$xl-width: 1280px;
+$xxl-width: 1440px;
+$retina: "(min-resolution: 144dpi), (min-resolution: 1.5dppx)";
+
+$grid-breakpoints: (
+  xs: 0,
+  sm: 568px,
+  md: 768px,
+  lg: 992px,
+  xl: 1280px
+);
+
+$grid-max-widths: (
+  sm: none,
+  md: 720px,
+  lg: 960px,
+  xl: 1000px
+);
+
+$grid-max-widths--slim: (
+  sm: none,
+  md: none,
+  lg: 780px,
+  xl: 800px
+);

@@ -1,0 +1,76 @@
+.improvements {
+
+}
+
+.improvements__list {
+  @include clear-list();
+  @include make-row();
+}
+
+.improvements__item {
+  margin-bottom: $grid-gutter-width;
+  font-size: rem($font-size--small);
+  text-align: center;
+
+  p {
+    max-width: 300px;
+    margin: 0;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  @include media-breakpoint-up(sm) {
+    margin-bottom: ($grid-gutter-width * 1);
+  }
+}
+
+.improvements__icon {
+  color: $success-color;
+  fill: currentColor;
+  margin-bottom: ($grid-gutter-width / 2);
+}
+
+.improvements__caption {
+  display: block;
+  max-width: 300px;
+  margin: 0;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: ($grid-gutter-width / 2);
+  font-weight: normal;
+  font-size: rem(20);
+  line-height: 1.2;
+  font-family: $secondary-font;
+  color: $success-color;
+
+  @include media-breakpoint-up(md) {
+    font-size: rem($font-size--large);
+  }
+}
+
+.improvements__footer {
+  margin-top: ($grid-gutter-width * 2);
+  text-align: center;
+}
+
+.improvements__button {
+  width: 100%;
+  margin-bottom: $grid-gutter-width;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  @include media-breakpoint-up(sm) {
+    width: auto;
+    margin-bottom: 0;
+  }
+
+  @include media-breakpoint-up(md) {
+    margin-right: $grid-gutter-width;
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+}

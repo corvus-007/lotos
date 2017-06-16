@@ -1,0 +1,50 @@
+.base-gallery {
+  .fancybox-button--left {
+    position: absolute;
+    top: 50%;
+    left: 10px;
+    z-index: 99993;
+    width: 60px;
+    height: 60px;
+    border-radius: $border-radius;
+
+    &::after {
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      margin: auto;
+      width: 12px;
+      height: 12px;
+    }
+  }
+
+  .fancybox-button--right {
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    z-index: 99993;
+    width: 60px;
+    height: 60px;
+    border-radius: $border-radius;
+
+    &::after {
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      margin: auto;
+      width: 12px;
+      height: 12px;
+    }
+  }
+
+  @include media-breakpoint-up(sm) {
+    .fancybox-button--left {
+      display: block !important;
+    }
+    .fancybox-button--right {
+      display: block !important;
+    }
+  }
+}

@@ -1,0 +1,86 @@
+.faq {
+  background-color: $dark-color;
+  // color: $secondary-color-3;
+}
+
+.faq__list {
+  color: $secondary-color;
+
+  dt {
+    position: relative;
+    margin-bottom: ($grid-gutter-width / 2);
+    padding: ($grid-gutter-width / 2) $grid-gutter-width;
+    padding-right: ($grid-gutter-width * 3);
+    font-weight: normal;
+    line-height: 1.25;
+    border: 1px solid;
+    border-radius: $border-radius;
+    cursor: pointer;
+    transition: $duration;
+
+    &:hover {
+      background-color: darken($dark-color, 2%);
+    }
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      right: $grid-gutter-width;
+      width: 10px;
+      height: 10px;
+      margin: auto;
+      border: 1px solid;
+      box-sizing: border-box;
+      border-top: none;
+      border-left: none;
+      transform: rotate(45deg);
+      transition: $duration;
+    }
+  }
+
+  .is-opened {
+    background-color: darken($dark-color, 1%);
+    color: $white-color;
+
+    &::before {
+      transform: rotate(45deg) scale(-1);
+    }
+  }
+
+  dd {
+    margin: 0;
+    margin-bottom: ($grid-gutter-width / 2);
+    padding: $grid-gutter-width;
+    font-size: rem(17);
+    color: $white-color;
+
+    & > :first-child {
+      margin-top: 0;
+    }
+
+    & > :last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  ul,
+  ol,
+  p {
+    margin-bottom: 0.5em;
+  }
+
+  a {
+
+  }
+
+  @include media-breakpoint-up(md) {
+    margin-left: 8vw;
+    margin-right: 8vw;
+
+    dt {
+      font-size: rem($font-size);
+    }
+  }
+}

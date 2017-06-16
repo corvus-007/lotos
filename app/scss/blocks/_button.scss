@@ -1,0 +1,124 @@
+@mixin createButton() {
+  display: inline-block;
+  padding: rem(12) rem(35);
+  text-align: center;
+  font-family: inherit;
+  font-size: rem($font-size);
+  font-weight: 600;
+  text-decoration: none;
+  text-transform: uppercase;
+  line-height: normal;
+  outline: none;
+  user-select: none;
+  background-color: transparent;
+  border: 3px solid transparent;
+  border-radius: 60px;
+  box-sizing: border-box;
+  transition: $duration;
+  cursor: pointer;
+}
+
+@mixin createButtonSmall() {
+  padding: rem(8) rem(28);
+  font-size: rem($font-size--small);
+}
+
+@mixin createButtonLarge() {
+  padding: rem(18) rem(40);
+  font-size: rem($font-size--large);
+}
+
+@mixin createButtonColors() {
+  color: #2e292f;
+  background-color: $secondary-color-2;
+
+  &:hover,
+  &:focus {
+    color: #2e292f;
+    background-color: mix($white-color, $secondary-color-2, 15%);
+  }
+
+  &:active {
+    background-color: mix($base-color, $secondary-color-2, 15%);
+  }
+}
+
+@mixin createButtonColorsGreen() {
+  color: #2e292f;
+  background-color: $green-color;
+
+  &:hover,
+  &:focus {
+    color: #2e292f;
+    background-color: mix($white-color, $green-color, 15%);
+  }
+
+  &:active {
+    background-color: mix($dark-color, $green-color, 15%);
+  }
+}
+
+@mixin createButtonColorsOranges() {
+  color: $white-color;
+  background-color: $accent-color;
+
+  &:hover,
+  &:focus {
+    color: $white-color;
+    background-color: $link-color--hover;
+  }
+}
+
+@mixin createButtonColorsBlue() {
+  color: $white-color;
+  background-color: $blue-color;
+
+  &:hover,
+  &:focus {
+    color: $white-color;
+    background-color: mix($white-color, $blue-color, 15%);
+  }
+
+  &:active {
+    background-color: mix($dark-color, $blue-color, 15%);
+  }
+}
+
+.button {
+  @include createButton();
+  @include createButtonColors();
+
+  &--small {
+    @include createButtonSmall();
+  }
+
+  &--large {
+    @include createButtonLarge();
+  }
+
+  &--green {
+    @include createButtonColorsGreen();
+  }
+
+  &--orange {
+    @include createButtonColorsOranges();
+  }
+
+  &--blue {
+    @include createButtonColorsOranges();
+  }
+}
+
+.button__icon {
+  display: inline-block;
+  vertical-align: middle;
+  fill: currentColor;
+
+  &:first-child {
+    margin-right: 0.5em;
+  }
+
+  &:last-child {
+    margin-left: 0.5em;
+  }
+}

@@ -1,0 +1,38 @@
+.page {
+
+}
+
+.page__headline {
+  margin-top: ($grid-gutter-width * 3);
+  margin-bottom: ($grid-gutter-width * 3);
+
+  h1 {
+    margin: 0;
+    font-weight: 600;
+    font-size: rem(40);
+    font-family: $secondary-font;
+  }
+}
+
+.page__intro {
+  margin-top: $grid-gutter-width;
+  font-size: rem(20);
+
+  & > :last-child {
+    margin-bottom: 0;
+  }
+}
+
+.page__content {
+
+}
+
+.page__content-incut {
+
+}
+
+.page__content-divider {
+  margin-top: $grid-gutter-width;
+  margin-bottom: $grid-gutter-width;
+  border-top: 1px solid $secondary-color;
+}

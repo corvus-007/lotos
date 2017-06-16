@@ -1,0 +1,19 @@
+.contacts-footer {
+  text-align: right;
+}
+
+.contacts-footer__phones {
+  font-size: rem($font-size);
+  font-weight: 600;
+  color: $secondary-color;
+
+  a {
+    display: block;
+    color: $secondary-color;
+    border-bottom: none;
+  }
+
+  span {
+    color: $primary-color;
+  }
+}

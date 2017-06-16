@@ -1,0 +1,47 @@
+.site-header {
+  position: relative;
+  z-index: 3;
+}
+
+.homepage .site-header {
+  @include media-breakpoint-up(md) {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    max-width: 100%;
+  }
+}
+
+.site-header__inner {
+  @include make-limit-width();
+
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: $grid-gutter-width;
+  padding-bottom: $grid-gutter-width;
+
+  @include media-breakpoint-up(md) {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+
+.site-header__logo {
+  margin-bottom: $grid-gutter-width;
+
+  @include media-breakpoint-up(md) {
+    margin-bottom: 0;
+  }
+}
+
+.site-header__contacts {
+  margin-bottom: $grid-gutter-width;
+
+  @include media-breakpoint-up(md) {
+    margin-bottom: 0;
+  }
+}

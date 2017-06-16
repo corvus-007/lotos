@@ -1,0 +1,32 @@
+.documents-footer {
+  @include media-breakpoint-up(lg) {
+    margin-left: 6%;
+    margin-right: 5%;
+  }
+  @include media-breakpoint-up(xl) {
+    margin-left: 12%;
+    margin-right: 10%;
+  }
+}
+
+.documents-footer__item {
+
+}
+
+.documents-footer__link {
+  display: inline-flex;
+  align-items: center;
+  margin-bottom: 0.2em;
+  font-size: $font-size--small;
+  transition: $duration;
+}
+
+.documents-footer__item-icon {
+  margin-right: 6px;
+  fill: currentColor;
+  vertical-align: middle;
+}
+
+.documents-footer__item-label {
+  border-bottom: 1px solid;
+}

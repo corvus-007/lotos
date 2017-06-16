@@ -1,0 +1,65 @@
+@import "normalize";
+
+@import "variables";
+@import "functions";
+@import "mixins";
+
+// Global
+@import "global/fonts";
+@import "global/grid";
+@import "global/base";
+@import "global/layout";
+
+// Vendors
+@import "vendors/slick";
+@import "vendors/jquery.fancybox";
+@import "vendors/hamburgers/hamburgers";
+
+// Blocks
+@import "blocks/icon";
+@import "blocks/button";
+@import "blocks/form";
+@import "blocks/table";
+@import "blocks/popup";
+@import "blocks/feature-popup";
+// @import "blocks/gallery-popup";
+// @import "blocks/features-popup";
+@import "blocks/booking-popup";
+@import "blocks/custom-ol";
+@import "blocks/custom-ul";
+@import "blocks/tabs";
+@import "blocks/base-gallery";
+@import "blocks/base-slider";
+@import "blocks/site-header";
+@import "blocks/logo";
+@import "blocks/contacts-header";
+@import "blocks/page";
+@import "blocks/contacts-footer";
+@import "blocks/welcome";
+@import "blocks/navbar";
+@import "blocks/main-nav";
+@import "blocks/section";
+@import "blocks/cta";
+@import "blocks/about";
+@import "blocks/partners";
+@import "blocks/partners-slider";
+@import "blocks/services";
+@import "blocks/gallery";
+@import "blocks/gallery-slider";
+// @import "blocks/features";
+@import "blocks/team";
+@import "blocks/team-slider";
+@import "blocks/person";
+@import "blocks/certs-slider";
+@import "blocks/reviews";
+@import "blocks/reviews-slider";
+@import "blocks/form-reviews";
+@import "blocks/gender-controls";
+@import "blocks/star-controls";
+@import "blocks/improvements";
+@import "blocks/faq";
+@import "blocks/location";
+// @import "blocks/archive-events";
+@import "blocks/site-footer";
+@import "blocks/documents-footer";
+@import "blocks/socials";

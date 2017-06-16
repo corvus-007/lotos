@@ -1,0 +1,30 @@
+.navbar {
+  position: relative;
+  z-index: 20;
+  background-color: $light-color;
+  transition: background-color $duration;
+}
+
+.is-sticky .navbar {
+  left: 0;
+  right: 0;
+}
+
+.navbar__inner {
+  @include make-limit-width();
+
+  display: flex;
+  // align-items: center;
+  justify-content: space-between;
+  padding-top: 10px;
+  padding-bottom: 10px;
+
+  @include media-breakpoint-up(lg) {
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+}
+
+.navbar__socials {
+  align-self: center;
+}
