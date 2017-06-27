@@ -7,6 +7,8 @@ $secondary-color: #dfe6ec;
 $secondary-color-2: #dfe6ec;
 // $secondary-color-3: #fdf6eb;
 
+$gray-color-245: #f5f5f5;
+
 $white-color: #ffffff;
 $dark-color: #2f2a30;
 $green-color: #01ec96;
@@ -57,11 +59,14 @@ $slider-buffer-dots: ($grid-gutter-width * 2);
 
 // Media querys
 $xs-width: 0;
-$sm-width: 568px;
-$md-width: 768px;
-$lg-width: 992px;
-$xl-width: 1280px;
-$xxl-width: 1440px;
+$sm-width: "(min-width: 568px)";
+$md-width: "(min-width: 768px)";
+$lg-width: "(min-width: 992px)";
+$xl-width: "(min-width: 1280px)";
+$xxl-width: "(min-width: 1500px)";
+$xs-only: "(max-width: 567px)";
+$sm-only: "(max-width: 767px)";
+$md-only: "(max-width: 991px)";
 $retina: "(min-resolution: 144dpi), (min-resolution: 1.5dppx)";
 
 $grid-breakpoints: (
@@ -69,19 +74,22 @@ $grid-breakpoints: (
   sm: 568px,
   md: 768px,
   lg: 992px,
-  xl: 1280px
+  xl: 1280px,
+  xxl: 1500px
 );
 
 $grid-max-widths: (
   sm: none,
   md: 720px,
   lg: 960px,
-  xl: 1000px
+  xl: 1000px,
+  xxl: 1200px
 );
 
 $grid-max-widths--slim: (
   sm: none,
   md: none,
   lg: 780px,
-  xl: 800px
+  xl: 800px,
+  xxl: 980px
 );

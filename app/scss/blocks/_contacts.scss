@@ -1,0 +1,76 @@
+.contacts {
+  padding-bottom: 0;
+
+  @media (min-width: 768px) {
+    padding-bottom: 0;
+  }
+}
+
+.contacts__frame {
+  position: relative;
+
+  @media (min-width: 667px) {
+    padding-top: rem(50);
+    padding-bottom: rem(50);
+  }
+}
+
+.contacts__map {
+  height: rem(400);
+
+  @include media-breakpoint-up(md) {
+    position: absolute;
+    height: 500px;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: auto;
+  }
+
+}
+
+.contacts__info {
+  padding-left: 0;
+  padding-right: 0;
+  // margin-bottom: rem(40px);
+  padding: rem(30);
+  font-size: rem(22);
+  background-color: $secondary-color;
+
+  @include media-breakpoint-up(md) {
+    position: relative;
+    z-index: 1;
+    display: inline-block;
+    margin-bottom: 0;
+    padding: rem($grid-gutter-width * 3);
+    font-size: rem(18);
+    background-color: #fff;
+    border: 5px solid $secondary-color;
+    vertical-align: middle;
+  }
+}
+
+.contacts__info-item {
+  margin: 0;
+  margin-bottom: 1em;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.contacts__phones {
+  a {
+    color: currentColor;
+    border-bottom: none;
+  }
+}
+
+.contacts__work {
+
+}
+
+.contacts__work-off-day {
+  color: $muted-color;
+}

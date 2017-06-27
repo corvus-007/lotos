@@ -12,7 +12,7 @@
 .location__map-wrapper {
   position: relative;
   overflow: hidden;
-  height: 400px;
+  height: rem(400);
 
   @include media-breakpoint-up(md) {
     position: absolute;
@@ -39,12 +39,12 @@
   box-sizing: border-box;
 
   @include media-breakpoint-up(sm) {
-    padding: 45px 50px;
+    padding: rem(45) rem(45);
   }
 
   @include media-breakpoint-up(md) {
     margin-left: auto;
-    max-width: 400px;
+    max-width: rem(400);
   }
 }
 
@@ -58,9 +58,9 @@
 .location__note {
   text-align: center;
   margin: 0;
-  margin-top: ($grid-gutter-width / 1);
-  margin-left: ($grid-gutter-width / 2);
-  margin-right: ($grid-gutter-width / 2);
+  margin-top: rem($grid-gutter-width / 1);
+  margin-left: rem($grid-gutter-width / 2);
+  margin-right: rem($grid-gutter-width / 2);
   font-size: rem($font-size--smaller);
 
   & > :last-child {

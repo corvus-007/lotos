@@ -1,0 +1,26 @@
+.for-applicants {
+  padding-top: rem($grid-gutter-width * 3);
+  padding-bottom: rem($grid-gutter-width * 3);
+  background-color: $light-color;
+}
+
+.for-applicants__inner {
+  text-align: center;
+}
+
+.for-applicants__title {
+  margin-top: 0;
+}
+
+.for-applicants__lead {
+  max-width: 720px;
+  margin-left: auto;
+  margin-right: auto;
+  font-size: rem($font-size--large);
+}
+
+.for-applicants__phone {
+  display: block;
+  font-weight: 600;
+  font-size: rem(26);
+}

@@ -95,6 +95,7 @@
   @include createButtonColorsGreen();
 
   padding: rem(3) rem(10);
+  min-width: auto;
   font-size: rem(17);
   text-transform: none;
 

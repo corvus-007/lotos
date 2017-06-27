@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Вакансии - Лотос</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="page">
+  <div class="site-wrapper">
+    @@include('blocks/site-header.html') @@include('blocks/navbar.html')
+
+    <main class="main">
+      <article class="page__content">
+        <header class="page__headline slim-container">
+          <h1>Вакансии</h1>
+          <div class="page__intro">
+            <p>Уважаемые посетители сайта, если вы уже стали пациентом нашего клиники семейной стоматологии «Лотос», то здесь вы можете оставить свой отзыв о работе специалистов Центра, высказать свои пожелания и предложения по улучшению качества обслуживания. Ваше мнение очень важно для нас!</p>
+          </div>
+        </header>
+        <div class="page__content-incut container">
+          <div class="vacancy">
+            <ul class="vacancy__list">
+              <li class="vacancy__item col-sm-6">
+                <div class="vacancy__image-wrapper">
+                  <img src="http://placehold.it/100x100/11CBD7/fff" alt="">
+                </div>
+                <div class="vacancy__content">
+                  <h2 class="vacancy__caption">Врач-стоматолог</h2>
+                  <p>В стоматологический кабинет «Лучший» приглашаем на работу — профессионального врача-стоматолога.</p>
+                  <h3>Требования к кандидату:</h3>
+                  <ul>
+                    <li>опыт работы по специальности;</li>
+                    <li>высокий профессионализм;</li>
+                    <li>умение работать в коллективе.</li>
+                  </ul>
+                  <h3>Условия работы:</h3>
+                  <ul>
+                    <li>своевременная оплата;</li>
+                    <li>премии;</li>
+                    <li>чуткое руководство;</li>
+                    <li>надежная компания;</li>
+                    <li>растущая заработная плата;</li>
+                    <li>наличие испытательного срока;</li>
+                    <li>оформление по ТК РФ.</li>
+                  </ul>
+                </div>
+              </li>
+              <li class="vacancy__item col-sm-6">
+                <div class="vacancy__image-wrapper">
+                  <img src="http://placehold.it/100x100/F60C86/fff" alt="">
+                </div>
+                <div class="vacancy__content">
+                  <h2 class="vacancy__caption">Медицинская сестра</h2>
+                  <p>В стоматологический кабинет «Лучший» приглашаем на работу — медицинскую сестру.</p>
+                  <h3>Требования к кандидату:</h3>
+                  <ul>
+                    <li>опыт работы по специальности;</li>
+                    <li>высокий профессионализм;</li>
+                    <li>умение работать в коллективе.</li>
+                  </ul>
+                  <h3>Условия работы:</h3>
+                  <ul>
+                    <li>своевременная оплата;</li>
+                    <li>премии;</li>
+                    <li>чуткое руководство;</li>
+                    <li>надежная компания;</li>
+                    <li>растущая заработная плата;</li>
+                    <li>наличие испытательного срока;</li>
+                    <li>оформление по ТК РФ.</li>
+                  </ul>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="page__content-incut">
+          <div class="for-applicants">
+            <div class="for-applicants__inner container">
+              <h2 class="for-applicants__title">Для соискателей</h2>
+              <div class="for-applicants__lead">
+                <p>Ваш опыт работы позволяет вас считать себя лучшим? Тогда мы с удовольствием рассмотрим вашу кандидатуру.</p>
+              </div>
+              <p>
+                <img src="http://placehold.it/100x100/FF7575/fff" alt="">
+              </p>
+              <p>Позвоните нам по телефону: <a class="for-applicants__phone" href="tel:+7 (953) 282-03-33">+7 (953) 282-03-33</a></p>
+              <p>Также вы можете прислать нам письмо с рассказом о себе. Мы обязательно ответим!</p>
+              <a class="button button--blue" data-fancybox href="#popup-short-biography">Написать письмо с резюме</a>
+            </div>
+          </div>
+        </div>
+      </article>
+    </main>
+
+    @@include('blocks/cta.html')
+
+    @@include('blocks/site-footer.html')
+  </div>
+  @@include('blocks/popup-short-biography.html')
+  @@include('blocks/popup-callback.html')
+  @@include('blocks/site-scripts.html')
+
+</body>
+
+</html>

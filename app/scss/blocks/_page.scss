@@ -1,5 +1,8 @@
 .page {
 
+  &--bg-light {
+    background-color: $light-color;
+  }
 }
 
 .page__headline {
@@ -35,4 +38,63 @@
   margin-top: $grid-gutter-width;
   margin-bottom: $grid-gutter-width;
   border-top: 1px solid $secondary-color;
+}
+
+.page__text {
+  // font-size: rem(14);
+
+  & > * + * {
+    margin-top: 1.5rem;
+    // margin-bottom: 0;
+  }
+
+  & > * + h2 {
+    margin-top: 2.4rem;
+  }
+
+  & > * + h3 {
+    margin-top: 2rem;
+  }
+
+  & > h2 + * {
+    margin-top: 0.6rem;
+  }
+
+  & > h3 + * {
+    margin-top: 0.6rem;
+  }
+
+  & > h2 + h3 {
+    margin-top: 1rem;
+  }
+
+  & > h2 {
+    margin-bottom: 0;
+    font-weight: 600;
+    font-size: rem(24);
+  }
+
+  & > h3 {
+    margin-bottom: 0;
+    font-weight: 600;
+    font-size: rem(21);
+  }
+
+  img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  @include media-breakpoint-up(md) {
+    .alignleft {
+      float: left;
+      margin-right: $grid-gutter-width;
+    }
+
+    .alignright {
+      float: right;
+      margin-left: $grid-gutter-width;
+    }
+  }
 }

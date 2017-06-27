@@ -56,7 +56,7 @@
     outline: none;
     background: $accent-color;
     cursor: pointer;
-    transition: filter 0.25s;
+    transition: $duration;
 
     &::before {
       content: "";

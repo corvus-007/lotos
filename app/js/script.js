@@ -53,15 +53,15 @@ document.addEventListener('DOMContentLoaded', function () {
     zIndex: 20
   });
 
-  $(mainNav).on('click', 'a[href^="#"]:not([data-fancybox])', function (event) {
-    var target = $(this.getAttribute('href'));
-    if (target.length) {
-      event.preventDefault();
-      $('html, body').stop().animate({
-        scrollTop: target.offset().top
-      }, 500);
-    }
-  });
+  // $(mainNav).on('click', 'a[href^="#"]:not([data-fancybox])', function (event) {
+  //   var target = $(this.getAttribute('href'));
+  //   if (target.length) {
+  //     event.preventDefault();
+  //     $('html, body').stop().animate({
+  //       scrollTop: target.offset().top
+  //     }, 500);
+  //   }
+  // });
 
   /*=====  End of Main nav  ======*/
 
@@ -253,8 +253,11 @@ document.addEventListener('DOMContentLoaded', function () {
 
 
 var locationMap = document.querySelector('#location-map');
+var isContatcsPage = null;
 
 if (locationMap) {
+  isContatcsPage = locationMap.classList.contains('contacts__map');
+  console.log(isContatcsPage);
   loadMapScript();
 }
 
@@ -272,10 +275,18 @@ function initializeMap() {
     lng: 34.303716
   };
 
-  var centerMap = {
-    lat: 53.305469,
-    lng: 34.308908
-  };
+  if (isContatcsPage) {
+    var centerMap = {
+      lat: 53.305469,
+      lng: 34.3
+    };
+  } else {
+    centerMap = {
+      lat: 53.305469,
+      lng: 34.308908
+    };
+  }
+
 
   centerMap = (window.matchMedia("(min-width: 768px)").matches) ? centerMap : locationOffice;
 

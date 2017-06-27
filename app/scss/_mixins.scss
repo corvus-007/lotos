@@ -9,20 +9,6 @@
   }
 }
 
-@mixin make-slim-container($gutter: $grid-gutter-width) {
-  min-width: (320px - $gutter);
-  max-width: 1500px;
-  margin-left: auto;
-  margin-right: auto;
-  padding-left: ($gutter / 2);
-  padding-right: ($gutter / 2);
-
-  @include media-breakpoint-up(md) {
-    padding-left: ($gutter * 3);
-    padding-right: ($gutter * 3);
-  }
-}
-
 @mixin make-limit-width($gutter: $grid-gutter-width) {
   min-width: (320px - $gutter);
   max-width: 1500px;

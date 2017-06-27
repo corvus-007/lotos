@@ -1,0 +1,47 @@
+.vacancy {
+
+}
+
+.vacancy__list {
+  @include clear-list();
+  @include make-row();
+}
+
+.vacancy__item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: rem($grid-gutter-width * 4);
+
+  @include media-breakpoint-up(lg) {
+    align-items: stretch;
+    flex-direction: row;
+  }
+}
+
+.vacancy__image-wrapper {
+  margin-bottom: 1rem;
+  flex-shrink: 0;
+
+  @include media-breakpoint-up(lg) {
+    margin-right: 1rem;
+    margin-bottom: 0;
+  }
+}
+
+.vacancy__content {
+  h2 {
+    margin-top: 0;
+    text-align: center;
+  }
+
+  @include media-breakpoint-up(lg) {
+    h2 {
+      text-align: left;
+    }
+  }
+}
+
+.vacancy__caption {
+
+}
