@@ -54,10 +54,9 @@
 }
 
 .events-preview__image-wrapper {
-  position: relative;
-  overflow: hidden;
+  @include fitObject(290, 218);
 
-  &::before {
+  &::after {
     content: "";
     position: absolute;
     left: 0;
@@ -70,16 +69,20 @@
 }
 
 .events-preview__image {
-
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
-.events-preview__content{
+.events-preview__content {
   position: relative;
   display: flex;
   flex-direction: column;
   flex-grow: 1;
   padding: rem(25);
-  // padding-top: rem($grid-gutter-width * 1.2);
   padding-top: 0;
 
   &::before {
@@ -90,7 +93,6 @@
     margin: auto;
     margin-top: -8px;
     margin-bottom: rem($grid-gutter-width / 1);
-    // transform: translateY(-25%);
     width: rem(32);
     height: rem(32);
     background: url("images/newspaper.svg") no-repeat center / contain;
