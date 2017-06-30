@@ -13,3 +13,19 @@
 .event__text {
 
 }
+
+.event__meta {
+  margin-top: auto;
+  margin-bottom: rem($grid-gutter-width);
+  font-size: $font-size--small;
+  text-align: center;
+}
+
+.event__date {
+  display: inline-block;
+  padding: rem(6) rem(16);
+  vertical-align: middle;
+  color: $base-color;
+  background-color: $light-color;
+  border-radius: 50px;
+}
