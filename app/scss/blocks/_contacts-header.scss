@@ -9,10 +9,10 @@
 .contacts-header__phones {
   font-weight: 600;
   font-size: rem(24);
-  color: $accent-color;
+  color: $white-color;
 
   a {
-    color: $accent-color;
+    color: $white-color;
     border-bottom: none;
 
     &:not(:last-child)::after {
@@ -21,7 +21,7 @@
   }
 
   span {
-    color: $primary-color;
+    color: $primary-color-2;
   }
 
   @include media-breakpoint-down(xs) {
@@ -31,6 +31,29 @@
   }
 }
 
+.homepage .contacts-header__phones {
+  color: $accent-color;
+
+  a {
+    color: $accent-color;
+  }
+
+  span {
+    color: $primary-color;
+  }
+}
+
 .contacts-header__callback {
   @include dotted-link();
+
+  color: $white-color;
+
+  &:hover,
+  &:focus {
+    color: $primary-color-2;
+  }
+}
+
+.homepage .contacts-header__callback {
+  color: $accent-color;
 }

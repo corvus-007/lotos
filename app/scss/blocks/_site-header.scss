@@ -1,9 +1,14 @@
 .site-header {
   position: relative;
   z-index: 3;
+  color: $white-color;
+  background-color: $accent-color-3;
 }
 
 .homepage .site-header {
+  color: $base-color;
+  background-color: #fff;
+
   @include media-breakpoint-up(md) {
     position: absolute;
     top: 0;

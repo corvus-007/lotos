@@ -5,7 +5,21 @@
 .logo__link {
   display: flex;
   align-items: center;
+  color: $primary-color-2;
+
+  &:hover,
+  &:focus {
+    color: $primary-color-2;
+  }
+}
+
+.homepage .logo__link {
   color: $base-color;
+
+  &:hover,
+  &:focus {
+    color: $base-color;
+  }
 }
 
 .logo__image {
@@ -20,9 +34,14 @@
   display: block;
   font-size: rem($font-size--large);
   font-family: $secondary-font;
+  color: $white-color;
+}
+
+.homepage .logo__name {
   color: $accent-color;
 }
 
 .logo__desc {
   display: block;
 }
+
