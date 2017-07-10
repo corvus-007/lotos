@@ -7,7 +7,7 @@
 
 .homepage .site-header {
   color: $base-color;
-  background-color: #fff;
+  background-color: transparent;
 
   @include media-breakpoint-up(md) {
     position: absolute;
