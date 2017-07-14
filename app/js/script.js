@@ -41,6 +41,10 @@ document.addEventListener('DOMContentLoaded', function () {
 
   mainNav.classList.remove('main-nav--no-js');
 
+  $(".main-nav__item--booking a").fancybox({
+    // Options will go here
+  });
+
   if (toggleMenu) {
     toggleMenu.addEventListener('click', function (event) {
       event.preventDefault();
@@ -52,16 +56,6 @@ document.addEventListener('DOMContentLoaded', function () {
   $(navbar).sticky({
     zIndex: 20
   });
-
-  // $(mainNav).on('click', 'a[href^="#"]:not([data-fancybox])', function (event) {
-  //   var target = $(this.getAttribute('href'));
-  //   if (target.length) {
-  //     event.preventDefault();
-  //     $('html, body').stop().animate({
-  //       scrollTop: target.offset().top
-  //     }, 500);
-  //   }
-  // });
 
   /*=====  End of Main nav  ======*/
 
@@ -249,17 +243,15 @@ document.addEventListener('DOMContentLoaded', function () {
 
   /*=====  End of Input mask  ======*/
 
+  var locationMap = document.querySelector('#location-map');
+
+  if (locationMap) {
+    isContatcsPage = locationMap.classList.contains('contacts__map');
+    loadMapScript();
+  }
 });
 
-
-var locationMap = document.querySelector('#location-map');
 var isContatcsPage = null;
-
-if (locationMap) {
-  isContatcsPage = locationMap.classList.contains('contacts__map');
-  console.log(isContatcsPage);
-  loadMapScript();
-}
 
 // Загрузка карты
 function loadMapScript() {
@@ -270,13 +262,14 @@ function loadMapScript() {
 
 // Инициализация карты
 function initializeMap() {
+  var centerMap = null;
   var locationOffice = {
     lat: 53.305469,
     lng: 34.303716
   };
 
   if (isContatcsPage) {
-    var centerMap = {
+    centerMap = {
       lat: 53.305469,
       lng: 34.3
     };
@@ -286,7 +279,6 @@ function initializeMap() {
       lng: 34.308908
     };
   }
-
 
   centerMap = (window.matchMedia("(min-width: 768px)").matches) ? centerMap : locationOffice;
 
@@ -303,20 +295,6 @@ function initializeMap() {
       scrollwheel: false,
     };
   }
-
-  function addMarker(markerOption) {
-    var svgIcon = {
-      url: ICONPATH,
-    };
-
-    var marker = new google.maps.Marker({
-      position: markerOption.position,
-      map: map,
-      title: markerOption.title,
-      icon: svgIcon
-    });
-  }
-
 
   var mapProp = createProp(locationOffice);
   var map = new google.maps.Map(document.getElementById("location-map"), mapProp);

@@ -31,16 +31,16 @@
 
 @mixin createButtonColors() {
   color: #2e292f;
-  background-color: $secondary-color-2;
+  background-color: $secondary-color;
 
   &:hover,
   &:focus {
     color: #2e292f;
-    background-color: mix($white-color, $secondary-color-2, 15%);
+    background-color: mix($white-color, $secondary-color, 15%);
   }
 
   &:active {
-    background-color: mix($base-color, $secondary-color-2, 15%);
+    background-color: mix($base-color, $secondary-color, 15%);
   }
 }
 
