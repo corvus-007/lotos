@@ -1,33 +1,40 @@
-.star-controls {
-  display: flex;
-}
+.wpcf7-form-control-wrap.userRating {
 
-.star-controls__input {
-  @include visuallyhidden();
-}
+  .wpcf7-form-control {
+    display: flex;
+  }
 
-.star-controls__indicator {
-  width: 38px;
-  height: 38px;
-  background-image: url("images/star--active.svg");
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: contain;
-  font-size: 0;
-  cursor: pointer;
-  transition: $duration;
-}
+  .wpcf7-list-item {}
 
-.star-controls__input:checked + .star-controls__indicator ~ .star-controls__indicator,
-.star-controls__input:hover + .star-controls__indicator ~ .star-controls__indicator,
-.star-controls__input:focus + .star-controls__indicator ~ .star-controls__indicator {
-  background-image: url("images/star.svg");
-}
+  input {
+    @include visuallyhidden();
+  }
 
-.star-controls__input:hover + .star-controls__indicator ~ .star-controls__indicator {
-  opacity: 0.7;
-}
+  .wpcf7-list-item-label {
+    display: inline-block;
+    vertical-align: middle;
+    width: 38px;
+    height: 38px;
+    background-image: url("images/star.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    font-size: 0;
+    cursor: pointer;
+    transition: $duration;
+  }
 
-.star-controls__input:focus + .star-controls__indicator {
-  filter: drop-shadow(0 0 2px rgba($dark-color, 0.5));
+  input:hover + .wpcf7-list-item-label {
+    opacity: 0.6;
+    background-image: url("images/star--active.svg");
+  }
+
+  input:focus + .wpcf7-list-item-label {
+    filter: drop-shadow(0 0 2px rgba($dark-color, 0.5));
+  }
+
+  input:checked + .wpcf7-list-item-label {
+    opacity: 1;
+    background-image: url("images/star--active.svg");
+  }
 }
