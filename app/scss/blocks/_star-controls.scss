@@ -4,7 +4,9 @@
     display: flex;
   }
 
-  .wpcf7-list-item {}
+  .wpcf7-list-item {
+    margin: 0;
+  }
 
   input {
     @include visuallyhidden();
