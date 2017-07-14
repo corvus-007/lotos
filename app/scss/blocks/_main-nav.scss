@@ -6,6 +6,50 @@
 .main-nav__list {
   @include clear-list();
 
+  li {
+
+  }
+
+  a {
+    display: block;
+    text-align: center;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    padding-left: ($grid-gutter-width / 2);
+    padding-right: ($grid-gutter-width / 2);
+    font-weight: 500;
+    font-size: rem(17);
+    color: $accent-color;
+    border-bottom: none;
+    transition: $duration;
+
+    &:hover,
+    &:focus {
+      color: $accent-color;
+      background-color: $secondary-color;
+    }
+  }
+
+  .main-nav__item--home a {
+    font-size: 0;
+
+    &::before {
+      content: "";
+      display: inline-block;
+      vertical-align: middle;
+      width: 22px;
+      height: 22px;
+      background: url("images/home.svg") no-repeat center / contain;
+    }
+  }
+
+  .current-menu-item {
+    background-color: $secondary-color;
+    a {
+      color: $accent-color-2;
+    }
+  }
+
   @include media-breakpoint-down(md) {
     position: absolute;
     top: 100%;
@@ -17,20 +61,27 @@
     .main-nav--closed & {
       display: none;
     }
+
+    a {
+      font-size: rem($font-size);
+    }
   }
 
   @include media-breakpoint-up(lg) {
     display: flex;
+
+    li {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
   }
-}
 
-.main-nav__item {
-
-  @include media-breakpoint-up(lg) {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
+  @include media-breakpoint-up(xl) {
+    a {
+      padding-left: 20px;
+      padding-right: 20px;
+    }
   }
 }
 
@@ -50,47 +101,7 @@
   opacity: 1;
 }
 
-.main-nav__link {
-  display: block;
-  text-align: center;
-  padding-top: 12px;
-  padding-bottom: 12px;
-  padding-left: ($grid-gutter-width / 2);
-  padding-right: ($grid-gutter-width / 2);
-  font-weight: 500;
-  font-size: rem(17);
-  color: $accent-color;
-  border-bottom: none;
-  transition: $duration;
-
-  &:hover,
-  &:focus {
-    color: $accent-color;
-    background-color: $secondary-color-2;
-  }
-
-  &--start {
-    font-size: 0;
-  }
-
-  @include media-breakpoint-down(md) {
-    font-size: rem($font-size);
-  }
-
-  @include media-breakpoint-up(lg) {
-  }
-
-  @include media-breakpoint-up(xl) {
-    padding-left: 20px;
-    padding-right: 20px;
-  }
-}
-
-.is-active .main-nav__link {
-  color: $accent-color-2;
-}
-
-.main-nav__link-booking {
+.main-nav__item--booking a {
   @include createButton();
   @include createButtonColorsGreen();
 
