@@ -18,7 +18,9 @@
         <header class="page__headline slim-container">
           <h1>Отзывы клиентов</h1>
           <div class="page__intro">
-            <p>Уважаемые посетители сайта, если вы уже стали пациентом нашего клиники семейной стоматологии «Лотос», то здесь вы можете оставить свой отзыв о работе специалистов Центра, высказать свои пожелания и предложения по улучшению качества обслуживания. Ваше мнение очень важно для нас!</p>
+            <p>Уважаемые посетители сайта, если вы уже стали пациентом нашего клиники семейной стоматологии «Лотос», то здесь
+              вы можете оставить свой отзыв о работе специалистов Центра, высказать свои пожелания и предложения по улучшению
+              качества обслуживания. Ваше мнение очень важно для нас!</p>
           </div>
         </header>
         <div class="page__content-incut">
@@ -42,7 +44,9 @@
                     </div>
                   </div>
                   <blockquote class="reviews__message">
-                    <p>Все супер!! Только положительные эмоции! Очень красиво в номере, уютненько. Расположение очень хорошее. За такие деньги лучше не найдёшь ничего! Татьяна Павловна гостеприимно встретила нас и разместила, рассказала где/что можно купить и куда можно сходить. Вообщем все понравилось! Незабываемая поездка</p>
+                    <p>Все супер!! Только положительные эмоции! Очень красиво в номере, уютненько. Расположение очень хорошее.
+                      За такие деньги лучше не найдёшь ничего! Татьяна Павловна гостеприимно встретила нас и разместила,
+                      рассказала где/что можно купить и куда можно сходить. Вообщем все понравилось! Незабываемая поездка</p>
                   </blockquote>
                 </div>
               </div>
@@ -64,7 +68,8 @@
                     </div>
                   </div>
                   <blockquote class="reviews__message">
-                    <p>Все супер!! Только положительные эмоции! Очень красиво в номере, уютненько. Вообщем все понравилось! Незабываемая поездка</p>
+                    <p>Все супер!! Только положительные эмоции! Очень красиво в номере, уютненько. Вообщем все понравилось!
+                      Незабываемая поездка</p>
                   </blockquote>
                 </div>
               </div>
@@ -82,12 +87,22 @@
                 <div class="form-item form-reviews__center-parent col-sm-6 col-md-3">
                   <div class="form-reviews__center-item">
                     <span class="form-label form-label--required">Ваш пол</span>
-                    <div class="gender-controls">
-                      <input class="gender-controls__input" type="radio" name="userGender" value="man" id="field-man" checked>
-                      <label class="gender-controls__indicator" for="field-man" title="Мужской">Мужской</label>
-                      <input class="gender-controls__input" type="radio" name="userGender" value="woman" id="field-woman">
-                      <label class="gender-controls__indicator" for="field-woman" title="Женский">Женский</label>
-                    </div>
+                    <span class="wpcf7-form-control-wrap userGender">
+                      <span class="wpcf7-form-control wpcf7-radio">
+                        <span class="wpcf7-list-item first">
+                          <label>
+                            <input type="radio" name="userGender" value="man" checked="checked">
+                            <span class="wpcf7-list-item-label">man</span>
+                          </label>
+                        </span>
+                        <span class="wpcf7-list-item last">
+                          <label>
+                            <input type="radio" name="userGender" value="woman">
+                            <span class="wpcf7-list-item-label">woman</span>
+                          </label>
+                        </span>
+                      </span>
+                    </span>
                   </div>
                 </div>
                 <div class="form-item form-reviews__center-parent col-sm-6 col-md-4">
@@ -115,7 +130,9 @@
               <div class="form-reviews__submit-wrapper form-sumbit-wrapper">
                 <input class="form-submit button button--blue" type="submit" value="Отправить сообщение">
                 <div class="form-reviews__note form-note">
-                  <p>отправляя данные, вы соглашаетесь с <a href="#" target="_blank">Политикой конфиденциальности</a> этого сайта</p>
+                  <p>отправляя данные, вы соглашаетесь с <a href="#" target="_blank">Политикой конфиденциальности</a> этого
+                    сайта
+                  </p>
                 </div>
               </div>
             </div>
@@ -124,9 +141,7 @@
       </article>
     </main>
 
-    @@include('blocks/cta.html')
-
-    @@include('blocks/site-footer.html')
+    @@include('blocks/cta.html') @@include('blocks/site-footer.html')
   </div>
   @@include('blocks/popup-callback.html') @@include('blocks/site-scripts.html')
 

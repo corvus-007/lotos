@@ -1,46 +1,53 @@
-.gender-controls {
-  display: flex;
-}
+.wpcf7-form-control-wrap.userGender {
 
-.gender-controls__input {
-  @include visuallyhidden();
-}
-
-.gender-controls__indicator {
-  display: block;
-  width: 48px;
-  height: 48px;
-  font-size: 0;
-  border: 4px solid transparent;
-  border-radius: 50%;
-  background-color: $secondary-color;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: contain;
-  cursor: pointer;
-  transition: $duration;
-
-  & ~ & {
-    margin-left: $grid-gutter-width;
+  .wpcf7-form-control {
+    display: flex;
   }
 
-  &[for="field-man"] {
+  .wpcf7-list-item {
+    margin-right: $grid-gutter-width;
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+
+  input {
+    @include visuallyhidden();
+  }
+
+  .wpcf7-list-item-label {
+    display: block;
+    width: 48px;
+    height: 48px;
+    font-size: 0;
+    border: 4px solid transparent;
+    border-radius: 50%;
+    background-color: $secondary-color;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    cursor: pointer;
+    transition: $duration;
+  }
+
+  [value="man"] + .wpcf7-list-item-label {
     background-image: url("images/man.svg");
   }
 
-  &[for="field-woman"] {
+  [value="woman"] + .wpcf7-list-item-label {
     background-image: url("images/woman.svg");
   }
-}
 
-.gender-controls__input:checked + .gender-controls__indicator {
-  border-color: $primary-color;
-}
+  input:checked + .wpcf7-list-item-label {
+    border-color: $primary-color;
+  }
 
-.gender-controls__input:not(:checked):hover + .gender-controls__indicator {
-  filter: brightness(105%);
-}
+  input:not(:checked):hover + .wpcf7-list-item-label {
+    filter: brightness(105%);
+  }
 
-.gender-controls__input:focus + .gender-controls__indicator {
-  filter: drop-shadow(0 0 2px rgba($dark-color, 0.5));
+  input:focus + .wpcf7-list-item-label {
+    filter: drop-shadow(0 0 2px rgba($dark-color, 0.5));
+  }
 }
