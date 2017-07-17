@@ -3,7 +3,33 @@
 }
 
 .event__headline {
+  position: relative;
+  margin-top: 0;
+  padding-top: rem($grid-gutter-width * 3);
+  padding-bottom: rem($grid-gutter-width * 3);
+  color: #fff;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
 
+  &::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    opacity: 0.6;
+    background-color: $accent-color;
+  }
+
+  h1 {
+    text-align: center;
+  }
+}
+
+.page__headline-content {
+  position: relative;
 }
 
 .event__image-holder {
