@@ -4,12 +4,12 @@
 
 .vacancy__list {
   @include clear-list();
-  @include make-row();
 }
 
 .vacancy__item {
   display: flex;
   flex-direction: column;
+  width: 100%;
   align-items: center;
   margin-bottom: rem($grid-gutter-width * 4);
 
@@ -30,6 +30,8 @@
 }
 
 .vacancy__content {
+  flex-grow: 1;
+
   h2 {
     margin-top: 0;
     text-align: center;
