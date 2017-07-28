@@ -20,10 +20,9 @@
     background-image: url("images/star.svg");
     background-repeat: no-repeat;
     background-position: center;
-    background-size: contain;
+    background-size: 100%;
     font-size: 0;
     cursor: pointer;
-    transition: $duration;
   }
 
   input:hover + .wpcf7-list-item-label {
