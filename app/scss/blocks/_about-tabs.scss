@@ -1,0 +1,74 @@
+.about-tabs {
+
+}
+
+.about-tabs__menu {
+  @include clear-list();
+
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.about-tabs__menu-item {
+  position: relative;
+  margin-right: 5px;
+  width: calc((100% - 3 * 5px) / 4);
+  height: 0;
+  padding-top: calc((100% - 3 * 5px) / 4);
+  font-size: rem($font-size--smaller);
+  border-radius: 50%;
+  color: $accent-color;
+  border: 1px solid;
+  box-sizing: border-box;
+  line-height: 1.2;
+  transition: $duration;
+
+  &:last-child {
+    margin-right: 0;
+  }
+
+  @include media-breakpoint-up(sm) {
+    margin-right: 1rem;
+    width: calc((100% - 3 * 1rem) / 4);
+    padding-top: calc((100% - 3 * 1rem) / 4);
+    font-size: rem($font-size);
+  }
+
+  @include media-breakpoint-up(lg) {
+    font-size: rem($font-size--small);
+  }
+}
+
+.about-tabs__menu-item.active {
+  background-color: $accent-color;
+}
+
+.about-tabs__menu-link {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  padding: 0.5rem;
+  transform: translate(-50%, -50%);
+  box-sizing: border-box;
+  text-align: center;
+  color: currentColor;
+
+  &::before {
+    content: "";
+    position: absolute;
+    left: -0.5rem;
+    top: -1.5rem;
+    right: -0.5rem;
+    bottom: -1.5rem;
+    border-radius: 50%;
+  }
+}
+
+.about-tabs__menu-item.active .about-tabs__menu-link {
+  color: $white-color;
+}
+
+.about-tabs__pane {
+
+}
