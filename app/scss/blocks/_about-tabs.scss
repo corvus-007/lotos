@@ -8,6 +8,7 @@
   display: flex;
   align-items: center;
   flex-wrap: wrap;
+  margin-bottom: 1rem;
 }
 
 .about-tabs__menu-item {
@@ -36,6 +37,9 @@
   }
 
   @include media-breakpoint-up(lg) {
+    margin-right: 1.4rem;
+    width: calc((100% - 3 * 1.4rem) / 4);
+    padding-top: calc((100% - 3 * 1.4rem) / 4);
     font-size: rem($font-size--small);
   }
 }
@@ -70,5 +74,7 @@
 }
 
 .about-tabs__pane {
-
+  & > :last-child {
+    margin-bottom: 0;
+  }
 }
