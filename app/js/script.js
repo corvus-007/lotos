@@ -1,4 +1,4 @@
-document.addEventListener('DOMContentLoaded', function () {
+document.addEventListener('DOMContentLoaded', function() {
   var baseTemplateSlider = '<div class="fancybox-container" role="dialog" tabindex="-1">' +
     '<div class="fancybox-bg"></div>' +
     '<div class="fancybox-controls">' +
@@ -19,6 +19,23 @@ document.addEventListener('DOMContentLoaded', function () {
     '<div class="fancybox-caption-wrap"><div class="fancybox-caption"></div></div>' +
     '</div>';
 
+  // Выровнять элементы по высоте.
+  // elements - строка селектора, напр. '.element'
+  function setMaxHeight(elements) {
+    var maxHeight = 0;
+
+    if (!elements.length) {
+      return;
+    }
+
+    Array.prototype.forEach.call(elements, function findMaxHeight(element) {
+      maxHeight = (maxHeight > element.clientHeight) ? maxHeight : element.clientHeight;
+    });
+
+    Array.prototype.forEach.call(elements, function specifyMaxHeight(element) {
+      element.style.height = maxHeight + 'px';
+    });
+  }
   /*================================
   =            Main nav            =
   ================================*/
@@ -29,7 +46,7 @@ document.addEventListener('DOMContentLoaded', function () {
   var windowPos = 0;
   var windowHeight = document.documentElement.clientHeight;
   var docHeight = $(document).height();
-  var aArray = $(mainNav).find('a[href^="#"]').map(function (index, elem) {
+  var aArray = $(mainNav).find('a[href^="#"]').map(function(index, elem) {
     if (this.hash) {
       return this.hash;
     }
@@ -46,7 +63,7 @@ document.addEventListener('DOMContentLoaded', function () {
   });
 
   if (toggleMenu) {
-    toggleMenu.addEventListener('click', function (event) {
+    toggleMenu.addEventListener('click', function(event) {
       event.preventDefault();
       mainNav.classList.toggle('main-nav--closed');
       toggleMenu.classList.toggle('is-active');
@@ -60,10 +77,12 @@ document.addEventListener('DOMContentLoaded', function () {
   /*=====  End of Main nav  ======*/
 
 
+  setMaxHeight(document.querySelectorAll('.about-tabs__pane'));
+
   $('.js-tabs').tabslet();
 
   $('.js-gallery-tabs').tabslet();
-  $('.js-gallery-tabs').on('_after', function () {
+  $('.js-gallery-tabs').on('_after', function() {
     $('.gallery-slider:visible').slick('refresh');
   });
 
@@ -71,10 +90,10 @@ document.addEventListener('DOMContentLoaded', function () {
 
   if (partnersSlider) {
     $(partnersSlider).slick({
-      autoplay: true,
+      autoplay: false,
       accessibility: false,
       slidesToShow: 5,
-      variableWidth: true,
+      // variableWidth: true,
       responsive: [{
         breakpoint: 767,
         settings: {
@@ -114,7 +133,7 @@ document.addEventListener('DOMContentLoaded', function () {
     loop: false,
     baseClass: 'base-gallery',
     baseTpl: baseTemplateSlider,
-    afterMove: function (instance, slide) {
+    afterMove: function(instance, slide) {
       $('.gallery-slider:visible').slick('slickGoTo', instance.currIndex - 1);
     }
   });
@@ -139,7 +158,7 @@ document.addEventListener('DOMContentLoaded', function () {
     }]
   });
 
-  $('.team-slider').on('init', function (event, instance) {
+  $('.team-slider').on('init', function(event, instance) {
     var teamItem = document.querySelector('.team__item');
     var heightTeamInfo = parseFloat(teamItem.querySelector('.team__info').offsetHeight);
     var teamItemPadBottom = parseFloat(getComputedStyle(teamItem).paddingBottom);
@@ -212,7 +231,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
   if ($accordion.length) {
     $accordion.find('dd').hide();
-    $accordion.on('click', 'dt', function (event) {
+    $accordion.on('click', 'dt', function(event) {
       event.preventDefault();
 
       $accordion
@@ -298,8 +317,7 @@ function initializeMap() {
 
   var mapProp = createProp(locationOffice);
   var map = new google.maps.Map(document.getElementById("location-map"), mapProp);
-  var ICONPATH = 'http://ideatech.ru/wp-content/themes/doberman/images/location-pin.svg';
-  var ICONPATH = 'images/location-pin.svg';
+  var ICONPATH = (location.hostname === 'localhost') ? './images/location-pin.svg' : 'http://lotos32.ru/wp-content/themes/lotos/images/location-pin.svg';
   var marker = new google.maps.Marker({
     position: locationOffice,
     map: map,
