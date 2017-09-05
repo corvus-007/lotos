@@ -6,8 +6,6 @@
   @include clear-list();
 
   display: flex;
-  align-items: center;
-  flex-wrap: wrap;
   margin-bottom: 1rem;
 }
 
@@ -15,31 +13,37 @@
   position: relative;
   margin-right: 5px;
   width: calc((100% - 3 * 5px) / 4);
-  height: 0;
-  padding-top: calc((100% - 3 * 5px) / 4);
   font-size: rem($font-size--smaller);
   border-radius: 50%;
   color: $accent-color;
-  border: 1px solid;
+  border: 1px solid $secondary-color;
   box-sizing: border-box;
   line-height: 1.2;
-  transition: $duration;
+  transition: ($duration * 1.5);
+
+  &::before {
+    content: "";
+    display: block;
+    padding-top: 100%;
+  }
 
   &:last-child {
     margin-right: 0;
   }
 
+  &:hover {
+    border-color: $accent-color;
+  }
+
   @include media-breakpoint-up(sm) {
     margin-right: 1rem;
     width: calc((100% - 3 * 1rem) / 4);
-    padding-top: calc((100% - 3 * 1rem) / 4);
     font-size: rem($font-size);
   }
 
   @include media-breakpoint-up(lg) {
     margin-right: 1.4rem;
     width: calc((100% - 3 * 1.4rem) / 4);
-    padding-top: calc((100% - 3 * 1.4rem) / 4);
     font-size: rem($font-size--small);
   }
 }
