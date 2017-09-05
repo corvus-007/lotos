@@ -36,8 +36,8 @@ gulp.task('style', function() {
       })
       ])
     )
+    .pipe(minify())
     .pipe(gulp.dest('build/'))
-    // .pipe(minify())
     // .pipe(rename({
     //   suffix: '-min'
     // }))
