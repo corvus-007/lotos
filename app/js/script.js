@@ -1,4 +1,4 @@
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
   var baseTemplateSlider = '<div class="fancybox-container" role="dialog" tabindex="-1">' +
     '<div class="fancybox-bg"></div>' +
     '<div class="fancybox-controls">' +
@@ -46,7 +46,7 @@ document.addEventListener('DOMContentLoaded', function() {
   var windowPos = 0;
   var windowHeight = document.documentElement.clientHeight;
   var docHeight = $(document).height();
-  var aArray = $(mainNav).find('a[href^="#"]').map(function(index, elem) {
+  var aArray = $(mainNav).find('a[href^="#"]').map(function (index, elem) {
     if (this.hash) {
       return this.hash;
     }
@@ -63,7 +63,7 @@ document.addEventListener('DOMContentLoaded', function() {
   });
 
   if (toggleMenu) {
-    toggleMenu.addEventListener('click', function(event) {
+    toggleMenu.addEventListener('click', function (event) {
       event.preventDefault();
       mainNav.classList.toggle('main-nav--closed');
       toggleMenu.classList.toggle('is-active');
@@ -77,12 +77,14 @@ document.addEventListener('DOMContentLoaded', function() {
   /*=====  End of Main nav  ======*/
 
 
-  setMaxHeight(document.querySelectorAll('.about-tabs__pane'));
+  if (matchMedia("(min-width: 992px)").matches) {
+    setMaxHeight(document.querySelectorAll('.about-tabs__pane'));
+  }
 
   $('.js-tabs').tabslet();
 
   $('.js-gallery-tabs').tabslet();
-  $('.js-gallery-tabs').on('_after', function() {
+  $('.js-gallery-tabs').on('_after', function () {
     $('.gallery-slider:visible').slick('refresh');
   });
 
@@ -93,7 +95,6 @@ document.addEventListener('DOMContentLoaded', function() {
       autoplay: false,
       accessibility: false,
       slidesToShow: 5,
-      // variableWidth: true,
       responsive: [{
         breakpoint: 767,
         settings: {
@@ -133,7 +134,7 @@ document.addEventListener('DOMContentLoaded', function() {
     loop: false,
     baseClass: 'base-gallery',
     baseTpl: baseTemplateSlider,
-    afterMove: function(instance, slide) {
+    afterMove: function (instance, slide) {
       $('.gallery-slider:visible').slick('slickGoTo', instance.currIndex - 1);
     }
   });
@@ -158,7 +159,7 @@ document.addEventListener('DOMContentLoaded', function() {
     }]
   });
 
-  $('.team-slider').on('init', function(event, instance) {
+  $('.team-slider').on('init', function (event, instance) {
     var teamItem = document.querySelector('.team__item');
     var heightTeamInfo = parseFloat(teamItem.querySelector('.team__info').offsetHeight);
     var teamItemPadBottom = parseFloat(getComputedStyle(teamItem).paddingBottom);
@@ -179,9 +180,7 @@ document.addEventListener('DOMContentLoaded', function() {
       breakpoint: 677,
       settings: {
         slidesToShow: 2,
-        // slidesToScroll: 1,
         arrows: false,
-        // centerMode: true
       }
     }, {
       breakpoint: 500,
@@ -201,7 +200,6 @@ document.addEventListener('DOMContentLoaded', function() {
     arrows: false,
     slidesToShow: 5,
     infinite: false,
-    // centerMode: true,
     responsive: [{
       breakpoint: 767,
       settings: {
@@ -231,7 +229,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
   if ($accordion.length) {
     $accordion.find('dd').hide();
-    $accordion.on('click', 'dt', function(event) {
+    $accordion.on('click', 'dt', function (event) {
       event.preventDefault();
 
       $accordion
